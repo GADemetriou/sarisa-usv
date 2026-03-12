@@ -214,7 +214,7 @@
   }
   .overview-text p strong { color: var(--text-dark); font-weight: 600; }
 
-  .overview-image{width:100%; height:420px;   overflow:hidden; border-radius:3px;}
+  .overview-image{width:100%; aspect-ratio:3/2;   overflow:hidden; border-radius:3px;}
   /* ── BOW SPOTLIGHT — full dark ── */
   .bow-section {
     background: #000;
@@ -557,11 +557,11 @@
     .ops-desc  { display: none; }
   }
   .overview-image img {
-	filter: saturate(0.6) contrast(1.15) brightness(0.9);
+	filter: saturate(0.85) contrast(1.05) brightness(0.95);
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	object-position: 55% center;
+	object-position: center center;
   }
   @media (max-width: 580px) {
     .pillars-grid, .spec-grid, .mission-grid { grid-template-columns: 1fr; }
@@ -745,7 +745,7 @@
 
 <!-- HERO -->
 <div class="hero">
-  <img class="hero-img" src="images/hero-image.webp" alt="Sarisa USV hero image">
+  <img class="hero-img" src="images/hero-image-2.webp" alt="Sarisa USV hero image">
   <div class="hero-overlay"></div>
   <div class="hero-scan"></div>
   <div class="hero-content">
@@ -820,7 +820,7 @@
           </p>
         </div>
       </div>
-      <div class="overview-image" style="height: 420px; overflow: hidden;">
+      <div class="overview-image" style="overflow: hidden;">
 		<img src="images/sarisa-3.webp" alt="SARISA uncrewed surface vehicle underway">
 	  </div>
     </div>
