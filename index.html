@@ -680,6 +680,7 @@
   .ops-stage:hover{
     background:#e2eaf5;
   }
+  .ops-stage.ops-stage--1:hover { background: #7d818a; }
 
   .ops-title{
     display:block;
@@ -700,10 +701,13 @@
   }
 
   /* Escalation colours */
-  .ops-stage--1 { background: #d0d3d8; } /* Slate grey — routine patrol */
+  .ops-stage--1 { background: #8b8f99; } /* Slate grey — routine patrol */
   .ops-stage--2 { background: #d4a020; } /* Amber — something detected */
   .ops-stage--3 { background: #e8852a; } /* Orange — assessing threat */
   .ops-stage--4 { background: #c0392b; } /* Red — respond now */
+  
+  .ops-stage--1 .ops-title,
+  .ops-stage--1 .ops-desc { color: #fff; }
 
   .ops-stage--2 .ops-title,
   .ops-stage--2 .ops-desc,
@@ -851,7 +855,7 @@
       <div class="pillar reveal">
         <p class="pillar-num">01</p>
         <p class="pillar-title"><span data-lang="en">Persistent Surveillance</span><span data-lang="el">Συνεχής Επιτήρηση</span></p>
-        <p class="pillar-text"><span data-lang="en">Continuous autonomous patrol of maritime zones without continuous crew deployment. Lower cost, higher coverage.</span><span data-lang="el">Συνεχής αυτόνομη περιπολία χωρίς ανθρώπινη παρουσία. Χαμηλότερο κόστος, μεγαλύτερη κάλυψη.</span></p>
+        <p class="pillar-text"><span data-lang="en">24/7 coverage through unit rotation — one patrols while another charges. No operational gaps, no continuous crew deployment.</span><span data-lang="el">Κάλυψη 24/7 μέσω εναλλαγής μονάδων — μία περιπολεί, μία φορτίζει. Χωρίς επιχειρησιακά κενά, χωρίς συνεχή ανθρώπινη παρουσία.</span></p>
       </div>
       <div class="pillar reveal">
         <p class="pillar-num">02</p>
@@ -865,8 +869,8 @@
       </div>
       <div class="pillar reveal">
         <p class="pillar-num">04</p>
-        <p class="pillar-title"><span data-lang="en">Low Risk Operations</span><span data-lang="el">Μειωμένος Επιχειρησιακός Κίνδυνος</span></p>
-        <p class="pillar-text"><span data-lang="en">Uncrewed deployment eliminates crew exposure in high-risk zones. Covert hull profile minimises detection.</span><span data-lang="el">Η μη επανδρωμένη ανάπτυξη εξαλείφει την έκθεση πληρώματος. Το κύτος χαμηλού αποτυπώματος μειώνει τον εντοπισμό.</span></p>
+       <p class="pillar-title"><span data-lang="en">Reduced Signature</span><span data-lang="el">Μειωμένο Αποτύπωμα</span></p>
+<p class="pillar-text"><span data-lang="en">Zero emissions, low thermal signature (FLIR invisible), and near-silent electric propulsion. Built to operate undetected in sensitive maritime environments.</span><span data-lang="el">Μηδενικές εκπομπές, χαμηλή θερμική υπογραφή (αόρατη σε FLIR) και σχεδόν αθόρυβη ηλεκτρική πρόωση. Σχεδιασμένη για αθόρυβη λειτουργία σε ευαίσθητα θαλάσσια περιβάλλοντα.</span></p>
       </div>
     </div>
   </div>
@@ -900,8 +904,8 @@
   </div>
 </section>
 <!-- IMAGE BREAK 2 -->
-<div class="img-break">
-  <img src="images/image-break-2.webp" alt="">
+<div class="img-break" style="aspect-ratio: 3/1;">
+  <img src="images/image-break-3.png" alt="" style="object-position: center 40%;">
 </div>
 <!-- CAPABILITIES — dark navy -->
 <div class="capabilities-section" id="capabilities">
@@ -915,6 +919,21 @@
       <span data-lang="el">Τεχνικά Χαρακτηριστικά</span>
     </h2>
     <div class="spec-grid">
+	  <div class="spec-card reveal">
+		<p class="spec-title"><span data-lang="en">Navigation</span><span data-lang="el">Πλοήγηση</span></p>
+		<p class="spec-value"><span data-lang="en">GPS-Denied</span><span data-lang="el">Χωρίς GPS</span></p>
+		<p class="spec-desc"><span data-lang="en"> GPS-independent navigation in structured and contested environments. Operational in all weather conditions. </span><span data-lang="el">Πλοήγηση χωρίς εξάρτηση από GPS σε δομημένα περιβάλλοντα και συνθήκες παρεμβολής. Λειτουργεί σε όλες τις καιρικές συνθήκες. </span></p>
+	  </div>
+	  <div class="spec-card reveal">
+		<p class="spec-title">GPS</p>
+		<p class="spec-value">Septentrio</p>
+		<p class="spec-desc"><span data-lang="en">Anti-jam and anti-spoofing GPS for reliable positioning in contested electromagnetic environments.</span><span data-lang="el">GPS ανθεκτικό σε παρεμβολές για αξιόπιστη εντόπιση σε ηλεκτρομαγνητικά αμφισβητούμενα περιβάλλοντα.</span></p>
+	  </div>
+	  <div class="spec-card reveal">
+		<p class="spec-title"><span data-lang="en">Command &amp; Control</span><span data-lang="el">Διοίκηση &amp; Έλεγχος</span></p>
+		<p class="spec-value"><span data-lang="en">Human-in-Loop</span><span data-lang="el">Human-in-the-Loop</span></p>
+		<p class="spec-desc"><span data-lang="en">All mission decisions require operator authorisation. ΣΑΡΙΣΑ extends human reach — it does not replace human judgement.</span><span data-lang="el">Κάθε επιχειρησιακή απόφαση απαιτεί εξουσιοδότηση χειριστή. Η ΣΑΡΙΣΑ επεκτείνει την ανθρώπινη ικανότητα — δεν την αντικαθιστά.</span></p>
+	  </div>
 	  <div class="spec-card reveal">
 		<p class="spec-title"><span data-lang="en">Hull Length</span><span data-lang="el">Μήκος Κύτους</span></p>
 		<p class="spec-value">2 m</p>
@@ -931,20 +950,20 @@
 		<p class="spec-desc"><span data-lang="en">Operational endurance of 3–4+ hours per deployment, enabling extended semi-autonomous patrol missions.</span><span data-lang="el">Επιχειρησιακή αντοχή 3–4+ ωρών ανά ανάπτυξη για παρατεταμένες αποστολές περιπολίας.</span></p>
 	  </div>
 	  <div class="spec-card reveal">
-		<p class="spec-title"><span data-lang="en">Navigation</span><span data-lang="el">Πλοήγηση</span></p>
-		<p class="spec-value"><span data-lang="en">GPS-Denied</span><span data-lang="el">Χωρίς GPS</span></p>
-		<p class="spec-desc"><span data-lang="en"> GPS-independent navigation in structured and contested environments. Operational in all weather conditions. </span><span data-lang="el">Πλοήγηση χωρίς εξάρτηση από GPS σε δομημένα περιβάλλοντα και συνθήκες παρεμβολής. Λειτουργεί σε όλες τις καιρικές συνθήκες. </span></p>
+		<p class="spec-title"><span data-lang="en">Weight</span><span data-lang="el">Βάρος</span></p>
+		<p class="spec-value">~50 kg</p>
+		<p class="spec-desc"><span data-lang="en">Lightweight platform. Easily transported and rapidly deployed by a two-person team.</span><span data-lang="el">Ελαφριά πλατφόρμα. Εύκολη μεταφορά και ταχεία ανάπτυξη από ομάδα δύο ατόμων.</span></p>
 	  </div>
 	  <div class="spec-card reveal">
-		<p class="spec-title">GPS</p>
-		<p class="spec-value">Septentrio</p>
-		<p class="spec-desc"><span data-lang="en">Anti-jam and anti-spoofing GPS for reliable positioning in contested electromagnetic environments.</span><span data-lang="el">GPS ανθεκτικό σε παρεμβολές για αξιόπιστη εντόπιση σε ηλεκτρομαγνητικά αμφισβητούμενα περιβάλλοντα.</span></p>
+		<p class="spec-title"><span data-lang="en">Beam</span><span data-lang="el">Πλάτος</span></p>
+		<p class="spec-value">~0.7 m</p>
+		<p class="spec-desc"><span data-lang="en">Narrow beam for low-profile silhouette and reduced radar cross-section on the water.</span><span data-lang="el">Στενό πλάτος για χαμηλό προφίλ και μειωμένη ανιχνευσιμότητα στο νερό.</span></p>
 	  </div>
 	  <div class="spec-card reveal">
-		<p class="spec-title"><span data-lang="en">Command &amp; Control</span><span data-lang="el">Διοίκηση &amp; Έλεγχος</span></p>
-		<p class="spec-value"><span data-lang="en">Human-in-Loop</span><span data-lang="el">Human-in-the-Loop</span></p>
-		<p class="spec-desc"><span data-lang="en">All mission decisions require operator authorisation. ΣΑΡΙΣΑ extends human reach — it does not replace human judgement.</span><span data-lang="el">Κάθε επιχειρησιακή απόφαση απαιτεί εξουσιοδότηση χειριστή. Η ΣΑΡΙΣΑ επεκτείνει την ανθρώπινη ικανότητα — δεν την αντικαθιστά.</span></p>
-  </div>
+		<p class="spec-title"><span data-lang="en">Speed</span><span data-lang="el">Ταχύτητα</span></p>
+		<p class="spec-value">~5 / 30–40 km/h</p>
+		<p class="spec-desc"><span data-lang="en">Patrol speed ~5 km/h for maximum endurance. Sprint capability of 30–40 km/h for rapid repositioning.</span><span data-lang="el">Ταχύτητα περιπολίας ~5 km/h για μέγιστη αυτονομία. Δυνατότητα ταχείας μετακίνησης 30–40 km/h.</span></p>
+	  </div>
 </div>
   </div>
 </div>
@@ -1002,7 +1021,7 @@
         <span data-lang="el">Για αιτήματα αξιολόγησης, επιχειρησιακές επιδείξεις, προτάσεις συνεργασίας ή θεσμικές εταιρικές σχέσεις — επικοινωνήστε απευθείας. Η ΣΑΡΙΣΑ είναι διαθέσιμη για δοκιμές και αξιολόγηση.</span>
       </p>
       <div class="contact-form">
-		<a href="mailto:gdi@talos-rtd.com?subject=%CE%A3%CE%91%CE%A1%CE%99%CE%A3%CE%91%20USV%20%E2%80%93%20Information%20Request&body=Name%3A%0AOrganization%3A%0ACountry%3A%0AInquiry%20type%3A%20%5B%20General%20/%20Technical%20/%20Partnership%20/%20Other%20%5D%0AMessage%3A%0A%0A" class="form-btn" style="display:inline-block;text-decoration:none;">
+		<a href="mailto:info@sarisa-usv.com?subject=%CE%A3%CE%91%CE%A1%CE%99%CE%A3%CE%91%20USV%20%E2%80%93%20Information%20Request&body=Name%3A%0AOrganization%3A%0ACountry%3A%0AInquiry%20type%3A%20%5B%20General%20/%20Technical%20/%20Partnership%20/%20Other%20%5D%0AMessage%3A%0A%0A" class="form-btn" style="display:inline-block;text-decoration:none;">
 			<span data-lang="en">Get in Touch</span><span data-lang="el">Επικοινωνήστε μαζί μας</span>
 		</a>
 	  </div>
